@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Martian+Mono:wght@300&family=Montserrat:wght@300&display=swap');
+
+:root{
+    --bg-main: rgb(18, 18, 18);
+    --bg-second: rgb(41, 41, 41);
+}
+
+body{
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.main{
+    
+    background-color: var(--bg-second);
+    
+    height: calc(100%);
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    top: 5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    padding: 0;
+   
+}
+.main-container{
+    font-family: 'Gabarito', cursive, 'Martian Mono', monospace, 'Montserrat', sans-serif;
+    margin: 1rem;
+    color: aliceblue;
+    display: flex;
+    position: relative;
+}
+
+.main-container img{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    border: solid var(--bg-main) 0.3rem;
+    border-radius: 2rem;
+    image-rendering: optimizeQuality;
+}
+.text-main-container{
+    position: relative;
+    width: 100%;
+
+}
+.text-main-container h1{
+    position: absolute;
+    font-size: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.text-main-container h1::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 5px;
+    width: 0%;
+    animation: animate 1s forwards; 
+    background-color: aliceblue;
+}
+.text{
+    margin-top: 5rem;
+    position: absolute;
+    width: 100%;
+}
+.text p{
+    text-wrap: pretty;
+    text-indent: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+@keyframes animate {
+    to{
+        width: 100%;
+    }
+}

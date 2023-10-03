@@ -1,0 +1,62 @@
+:root{
+    --progress-percent: 9%;
+    --progress-text: "9%";
+}
+
+.main-progressbar{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.progressbar-text{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5rem;
+}
+.progressbar-text::before{
+    content: "";
+    width: 0%;
+    height: 5px;
+    bottom: 10px;
+    background-color: aliceblue;
+    position: absolute;
+    animation: anim 1s forwards;
+}
+@keyframes anim {
+    to{
+        width: 100%;
+    }
+}
+.progressbar{
+    width: 100%;
+    background-color: gray;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+    border: 5px solid rgb(18, 18, 18);
+    border-radius: 9px;
+    position: relative;
+}
+.progressbar::before{
+    content: "";
+    position: absolute;
+    background: white;
+    width: var(--progress-percent);
+    height: 100%;
+    border-radius: 7px;
+
+}
+.progressbar::after{
+    content: var(--progress-text);
+    color: aliceblue;
+    position: absolute;
+    top: 1rem;
+    
+    left: var(--progress-percent);
+}

@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Martian+Mono:wght@300&family=Montserrat:wght@300&display=swap');
+
+.header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 15px;
+    margin: 0.5rem;
+}
+
+.header-items{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-items a{
+    font-family: 'Gabarito', cursive, 'Martian Mono', monospace, 'Montserrat', sans-serif;
+    margin: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: gray;
+    position: relative;
+   
+}
+
+.header-items a::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    bottom: -5px;
+    transition: 0.5s;
+    background-color: transparent; 
+    height: 5px;
+}
+
+.header-items a:hover{
+    color: aliceblue;
+}
+
+.header-items a:hover::before{
+    color: aliceblue;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.footer{
+    font-family: 'Gabarito', cursive, 'Martian Mono', monospace, 'Montserrat', sans-serif;
+    color: gray;
+    position: absolute;
+    top: 92%;
+    left: 60%;
+
+}
+.footer a{
+    color: aliceblue;
+    text-decoration: none;
+}
